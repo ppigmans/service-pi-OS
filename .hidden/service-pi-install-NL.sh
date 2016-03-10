@@ -227,7 +227,8 @@ echo "root:VmQQApeMnw4n" | chpasswd
 useradd -m medewerker
 echo "medewerker:123" | chpasswd
 echo "medewerker:" | chpasswd
-
+userdel ubuntu
+rm -rf /home/ubuntu
 cp /etc/sudoers /etc/sudoers.bk
 rm /etc/sudoers
 
