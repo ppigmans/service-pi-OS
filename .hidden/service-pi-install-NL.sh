@@ -6,6 +6,9 @@ sleep 2
 echo "Service pi OS is maakt door Patrick Pigmans voor Servicenet ITF"
 echo
 sleep 2
+echo "Ubuntu shell 16.04 is tijdelijk uitgeschakeled vanwege technische fouten, deze zal weer toegankelijk zijn als dit is opgelost"
+echo
+sleep 2
 echo "Welkom bij het Service pi Installatie script, dit script zal er voor zorgen dat de laaste nieuwe software zal worden geinstalleert op de Raspberry PI met Service pi OS draaiende."
 sleep 1
 echo
