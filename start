@@ -1,4 +1,21 @@
 #!/bin/sh
+echo
+echo
+echo
+echo
+echo
+echo
+echo
+echo
+echo "PLEASE USE SUDO TO RUN THIS INSTALLER/UPDATER"
+echo
+echo
+echo
+echo
+echo
+echo
+echo
+echo
 
 rm /bin/sh
 cp /bin/bash /bin/sh
