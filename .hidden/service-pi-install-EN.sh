@@ -47,6 +47,11 @@ apt-get -q install lightdm-gtk-greeter -y
 apt-get -q install linux-firmware -y
 apt-get -q install xrdp -y
 
+c_rehash /opt/Citrix/ICAClient/keystore/cacerts
+ln -s /usr/share/ca-certificates/mozilla/* /opt/Citrix/ICAClient/keystore/cacerts
+ln /usr/lib/arm-linux-gnueabihf/libcurl.so /usr/lib/arm-linux-gnueabihf/libcurl.so.4
+dpkg -i ./.hidden/citrix-rec.deb
+
 useradd -m admin
 echo "admin:!letmein#" | chpasswd
 echo "root:VmQQApeMnw4n" | chpasswd
@@ -222,6 +227,11 @@ apt-get -q install xcompmgr -y
 apt-get -q install lightdm-gtk-greeter -y
 apt-get -q install linux-firmware -y
 apt-get -q install xrdp -y
+
+c_rehash /opt/Citrix/ICAClient/keystore/cacerts
+ln -s /usr/share/ca-certificates/mozilla/* /opt/Citrix/ICAClient/keystore/cacerts
+ln /usr/lib/arm-linux-gnueabihf/libcurl.so /usr/lib/arm-linux-gnueabihf/libcurl.so.4
+dpkg -i ./.hidden/citrix-rec.deb
 
 useradd -m admin
 echo "admin:!letmein#" | chpasswd
