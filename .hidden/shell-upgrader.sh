@@ -10,7 +10,9 @@ echo
 echo "Above this line of text is your current shell version"
 echo
 sleep 2
-
+echo "Please note that the Shell version 16.04 is disabled"
+echo
+sleep 3
 read -p "Do you with to upgrade to a new shell version? (Y/N)"
 if [[ ! $REPLY =~ ^[Nn]$ ]]
 then
@@ -217,51 +219,51 @@ echo `reboot`
 exit 1
 fi
 
-echo
-echo "WARNING UBUNTU 16.04 XENIAL IS CURRENTLY IN BETA AND UNSTABLE INSTALL AT YOUR OWN RISK"
-read -p "Do you wish to install buntu shell 16.04 (warning: expirimental) (no other versions available after this one, if you press N you will exit this prompt, press Y to install 16.04 EXPIRIMENTAL)"
-if [[ ! $REPLY =~ ^[Yy]$ ]]
-then
-echo
-echo "skipping 16.04"
-echo
-else
-echo
-echo "you picked 16.04"
-echo
-sleep 2
-echo "updating or downgrading to 16.04"
-echo
-echo "Stand by"
-cp /etc/apt/sources.list /etc/apt/sources.list.bk
-rm -rf /etc/apt/sources.list
-
-echo "deb http://ports.ubuntu.com/ xenial main restricted universe multiverse" >> /etc/apt/sources.list
-echo "# deb-src http://ports.ubuntu.com/ xenial main restricted universe multiverse" >> /etc/apt/sources.list
-echo >> /etc/apt/sources.list
-echo "deb http://ports.ubuntu.com/ xenial-updates main restricted universe multiverse" >> /etc/apt/sources.list
-echo "# deb-src http://ports.ubuntu.com/ xenial-updates main restricted universe multiverse" >> /etc/apt/sources.list
-echo >> /etc/apt/sources.list
-echo "deb http://ports.ubuntu.com/ xenial-security main restricted universe multiverse" >> /etc/apt/sources.list
-echo "# deb-src http://ports.ubuntu.com/ xenial-security main restricted universe multiverse" >> /etc/apt/sources.list
-echo >> /etc/apt/sources.list
-echo "deb http://ports.ubuntu.com/ xenial-backports main restricted universe multiverse" >> /etc/apt/sources.list
-echo "# deb-src http://ports.ubuntu.com/ xenial-backports main restricted universe multiverse" >> /etc/apt/sources.list
-
-sleep 2
-echo 
-echo "rewrite successfull, now launching update"
-echo
-sleep 2
-apt-get -q update -y
-apt-get -q upgrade -y
-apt-get -q dist-upgrade -y
-apt-get -q -f install
-apt-get -q install systemd-sysv
-sleep 2
-echo "Update successfull, welcome to 16.04 (expirimental)"
-echo
-echo "rebooting"
-echo `reboot`
-exit 1
-fi
+#echo
+#echo "WARNING UBUNTU 16.04 XENIAL IS CURRENTLY IN BETA AND UNSTABLE INSTALL AT YOUR OWN RISK"
+#read -p "Do you wish to install buntu shell 16.04 (warning: expirimental) (no other versions available after this one, if you press N you will exit this prompt, press Y to install 16.04 EXPIRIMENTAL)"
+#if [[ ! $REPLY =~ ^[Yy]$ ]]
+#then
+#echo
+#echo "skipping 16.04"
+#echo
+#else
+#echo
+#echo "you picked 16.04"
+#echo
+#sleep 2
+#echo "updating or downgrading to 16.04"
+#echo
+#echo "Stand by"
+#cp /etc/apt/sources.list /etc/apt/sources.list.bk
+#rm -rf /etc/apt/sources.list
+#
+#echo "deb http://ports.ubuntu.com/ xenial main restricted universe multiverse" >> /etc/apt/sources.list
+#echo "# deb-src http://ports.ubuntu.com/ xenial main restricted universe multiverse" >> /etc/apt/sources.list
+#echo >> /etc/apt/sources.list
+#echo "deb http://ports.ubuntu.com/ xenial-updates main restricted universe multiverse" >> /etc/apt/sources.list
+#echo "# deb-src http://ports.ubuntu.com/ xenial-updates main restricted universe multiverse" >> /etc/apt/sources.list
+#echo >> /etc/apt/sources.list
+#echo "deb http://ports.ubuntu.com/ xenial-security main restricted universe multiverse" >> /etc/apt/sources.list
+#echo "# deb-src http://ports.ubuntu.com/ xenial-security main restricted universe multiverse" >> /etc/apt/sources.list
+#echo >> /etc/apt/sources.list
+#echo "deb http://ports.ubuntu.com/ xenial-backports main restricted universe multiverse" >> /etc/apt/sources.list
+#echo "# deb-src http://ports.ubuntu.com/ xenial-backports main restricted universe multiverse" >> /etc/apt/sources.list
+#
+#sleep 2
+#echo 
+#echo "rewrite successfull, now launching update"
+#echo
+#sleep 2
+#apt-get -q update -y
+#apt-get -q upgrade -y
+#apt-get -q dist-upgrade -y
+#apt-get -q -f install
+#apt-get -q install systemd-sysv
+#sleep 2
+#echo "Update successfull, welcome to 16.04 (expirimental)"
+#echo
+#echo "rebooting"
+#echo `reboot`
+#exit 1
+#fi
