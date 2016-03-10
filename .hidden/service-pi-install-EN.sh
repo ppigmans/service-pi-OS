@@ -6,6 +6,8 @@ sleep 2
 echo "Service PI OS has been designed by Patrick Pigmans for Servicenet ITF"
 echo
 sleep 2
+echo "Ubuntu shell 16.04 has been temporarly disabled due some technical difficulties, will unlock when fixed"
+sleep 2
 
 
 echo "Welcome to the Service pi Install script, this will ensure that the latest software used in the Service PI OS project will be installed on your computer this will take a while of your time but it is worth it to see the final product" 
