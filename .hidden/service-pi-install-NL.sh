@@ -180,11 +180,13 @@ apt-get -qq clean -y
 echo
 sleep 2
 echo "Begin herschrijven van lightdm-gtk-greeter.conf en overige bestanden in plaats zetten"
-mkdir /home/.files
 cp ./.hidden/lxde-icon.png /usr/share/lxde/images/lxde-icon.png
 cp ./.hidden/logout-banner.png /usr/share/lxde/images/logout-banner.png
-cp ./.hidden/sbg.jpg /home/.files/sbg.jpg
 cp ./.hidden/lightdm-gtk-greeter.conf /etc/lightdm/
+cp ./.hidden/sbg.jpg /usr/share/lxde/wallpapers/lxde_blue.jpg
+cp ./.hidden/sbg.jpg /usr/share/lxde/wallpapers/lxde_red.jpg
+cp ./.hidden/sbb.jpg /usr/share/lxde/wallpapers/lxde_green.jpg
+
 echo
 sleep 2
 echo "Herstarten"
