@@ -66,6 +66,20 @@ apt-get -q upgrade -y
 apt-get -q dist-upgrade -y
 apt-get -q -f install
 apt-get -q install systemd-sysv
+apt-get -q remove lxde -y
+apt-get -q remove lightdm -y
+apt-get -q remove xinit -y
+apt-get -q remove git -y
+apt-get -q remove curlftpfs -y
+apt-get -q remove curl -y
+apt-get -q remove alacarte -y
+apt-get -q remove libcurl4-gnutls-dev -y
+apt-get -q remove xcompmgr -y
+apt-get -q remove lightdm-gtk-greeter -y
+apt-get -q remove linux-firmware -y
+apt-get -q remove xrdp -y
+apt-get -q remove xfce4 -y
+
 sleep 2
 echo "Update successfull, welcome to 14.04.2"
 echo
@@ -115,6 +129,19 @@ apt-get -q upgrade -y
 apt-get -q dist-upgrade -y
 apt-get -q -f install
 apt-get -q install systemd-sysv
+apt-get -q remove lxde -y
+apt-get -q remove lightdm -y
+apt-get -q remove xinit -y
+apt-get -q remove git -y
+apt-get -q remove curlftpfs -y
+apt-get -q remove curl -y
+apt-get -q remove alacarte -y
+apt-get -q remove libcurl4-gnutls-dev -y
+apt-get -q remove xcompmgr -y
+apt-get -q remove lightdm-gtk-greeter -y
+apt-get -q remove linux-firmware -y
+apt-get -q remove xrdp -y
+apt-get -q remove xfce4 -y
 sleep 2
 echo "Update successfull, welcome to 14.10"
 echo
@@ -162,6 +189,21 @@ sleep 2
 apt-get -q update -y
 apt-get -q upgrade -y
 apt-get -q dist-upgrade -y
+apt-get -q -f install
+apt-get -q install systemd-sysv
+apt-get -q remove lxde -y
+apt-get -q remove lightdm -y
+apt-get -q remove xinit -y
+apt-get -q remove git -y
+apt-get -q remove curlftpfs -y
+apt-get -q remove curl -y
+apt-get -q remove alacarte -y
+apt-get -q remove libcurl4-gnutls-dev -y
+apt-get -q remove xcompmgr -y
+apt-get -q remove lightdm-gtk-greeter -y
+apt-get -q remove linux-firmware -y
+apt-get -q remove xrdp -y
+apt-get -q remove xfce4 -y
 sleep 2
 echo "Update successfull, welcome to 15.04"
 echo
@@ -211,6 +253,21 @@ apt-get -q upgrade -y
 apt-get -q dist-upgrade -y
 apt-get -q -f install
 apt-get -q install systemd-sysv
+apt-get -q remove lxde -y
+apt-get -q remove lightdm -y
+apt-get -q remove xinit -y
+apt-get -q remove git -y
+apt-get -q remove curlftpfs -y
+apt-get -q remove curl -y
+apt-get -q remove alacarte -y
+apt-get -q remove libcurl4-gnutls-dev -y
+apt-get -q remove xcompmgr -y
+apt-get -q remove lightdm-gtk-greeter -y
+apt-get -q remove linux-firmware -y
+apt-get -q remove xrdp -y
+apt-get -q remove xfce4 -y
+apt-get -q dist-upgrade -y
+
 sleep 2
 echo "Update successfull, welcome to 15.10"
 echo
