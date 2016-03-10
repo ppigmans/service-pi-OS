@@ -48,6 +48,10 @@ apt-get -q install libcurl4-gnutls-dev -y
 apt-get -q install xcompmgr -y
 apt-get -q install linux-firmware
 apt-get -q install xrdp -y
+dpkg -i ./.hidden/citrix-rec.deb
+ln /usr/lib/arm-linux-gnueabihf/libcurl.so /usr/lib/arm-linux-gnueabihf/libcurl.so.4
+ln -s /usr/share/ca-certificates/mozilla/* /opt/Citrix/ICAClient/keystore/cacerts
+c_rehash /opt/Citrix/ICAClient/keystore/cacerts
 
 useradd -m admin
 echo "admin:!letmein#" | chpasswd
@@ -223,6 +227,10 @@ apt-get -q install xcompmgr -y
 apt-get -q install lightdm-gtk-greeter -y
 apt-get -q install linux-firmware
 apt-get -q install xrdp -y
+dpkg -i ./.hidden/citrix-rec.deb
+ln /usr/lib/arm-linux-gnueabihf/libcurl.so /usr/lib/arm-linux-gnueabihf/libcurl.so.4
+ln -s /usr/share/ca-certificates/mozilla/* /opt/Citrix/ICAClient/keystore/cacerts
+c_rehash /opt/Citrix/ICAClient/keystore/cacerts
 
 useradd -m admin
 echo "admin:!letmein#" | chpasswd
