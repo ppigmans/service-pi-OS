@@ -56,8 +56,8 @@ rm -rf /etc/apt/sources.list
 echo "deb http://ports.ubuntu.com/ trusty main restricted universe multiverse" >> /etc/apt/sources.list
 echo "# deb-src http://ports.ubuntu.com/ trusty main restricted universe multiverse" >> /etc/apt/sources.list
 echo >> /etc/apt/sources.list
-echo "deb http://ports.ubuntu.com/ trusty-upgrades main restricted universe multiverse" >> /etc/apt/sources.list
-echo "# deb-src http://ports.ubuntu.com/ trusty-upgrades main restricted universe multiverse" >> /etc/apt/sources.list
+echo "deb http://ports.ubuntu.com/ trusty-updates main restricted universe multiverse" >> /etc/apt/sources.list
+echo "# deb-src http://ports.ubuntu.com/ trusty-updates main restricted universe multiverse" >> /etc/apt/sources.list
 echo >> /etc/apt/sources.list
 echo "deb http://ports.ubuntu.com/ trusty-security main restricted universe multiverse" >> /etc/apt/sources.list
 echo "# deb-src http://ports.ubuntu.com/ trusty-security main restricted universe multiverse" >> /etc/apt/sources.list
@@ -127,8 +127,8 @@ rm -rf /etc/apt/sources.list
 echo "deb http://ports.ubuntu.com/ utopic main restricted universe multiverse" >> /etc/apt/sources.list
 echo "# deb-src http://ports.ubuntu.com/ utopic main restricted universe multiverse" >> /etc/apt/sources.list
 echo >> /etc/apt/sources.list
-echo "deb http://ports.ubuntu.com/ utopic-upgrades main restricted universe multiverse" >> /etc/apt/sources.list
-echo "# deb-src http://ports.ubuntu.com/ utopic-upgrades main restricted universe multiverse" >> /etc/apt/sources.list
+echo "deb http://ports.ubuntu.com/ utopic-updates main restricted universe multiverse" >> /etc/apt/sources.list
+echo "# deb-src http://ports.ubuntu.com/ utopic-updates main restricted universe multiverse" >> /etc/apt/sources.list
 echo >> /etc/apt/sources.list
 echo "deb http://ports.ubuntu.com/ utopic-security main restricted universe multiverse" >> /etc/apt/sources.list
 echo "# deb-src http://ports.ubuntu.com/ utopic-security main restricted universe multiverse" >> /etc/apt/sources.list
@@ -196,8 +196,8 @@ rm -rf /etc/apt/sources.list
 echo "deb http://ports.ubuntu.com/ vivid main restricted universe multiverse" >> /etc/apt/sources.list
 echo "# deb-src http://ports.ubuntu.com/ vivid main restricted universe multiverse" >> /etc/apt/sources.list
 echo >> /etc/apt/sources.list
-echo "deb http://ports.ubuntu.com/ vivid-upgrades main restricted universe multiverse" >> /etc/apt/sources.list
-echo "# deb-src http://ports.ubuntu.com/ vivid-upgrades main restricted universe multiverse" >> /etc/apt/sources.list
+echo "deb http://ports.ubuntu.com/ vivid-updates main restricted universe multiverse" >> /etc/apt/sources.list
+echo "# deb-src http://ports.ubuntu.com/ vivid-updates main restricted universe multiverse" >> /etc/apt/sources.list
 echo >> /etc/apt/sources.list
 echo "deb http://ports.ubuntu.com/ vivid-security main restricted universe multiverse" >> /etc/apt/sources.list
 echo "# deb-src http://ports.ubuntu.com/ vivid-security main restricted universe multiverse" >> /etc/apt/sources.list
@@ -267,8 +267,8 @@ rm -rf /etc/apt/sources.list
 echo "deb http://ports.ubuntu.com/ wily main restricted universe multiverse" >> /etc/apt/sources.list
 echo "# deb-src http://ports.ubuntu.com/ wily main restricted universe multiverse" >> /etc/apt/sources.list
 echo >> /etc/apt/sources.list
-echo "deb http://ports.ubuntu.com/ wily-upgrades main restricted universe multiverse" >> /etc/apt/sources.list
-echo "# deb-src http://ports.ubuntu.com/ wily-upgrades main restricted universe multiverse" >> /etc/apt/sources.list
+echo "deb http://ports.ubuntu.com/ wily-updates main restricted universe multiverse" >> /etc/apt/sources.list
+echo "# deb-src http://ports.ubuntu.com/ wily-updates main restricted universe multiverse" >> /etc/apt/sources.list
 echo >> /etc/apt/sources.list
 echo "deb http://ports.ubuntu.com/ wily-security main restricted universe multiverse" >> /etc/apt/sources.list
 echo "# deb-src http://ports.ubuntu.com/ wily-security main restricted universe multiverse" >> /etc/apt/sources.list
