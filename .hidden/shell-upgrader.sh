@@ -72,11 +72,10 @@ echo "Herschrijving succesvol afgerond, upgrade starten"
 sleep 2
 apt-get -q update -y
 apt-get -q upgrade -y
-apt-get -q dist-upgrade -y
 apt-get -q -f install
 apt-get -q install systemd-sysv
-apt-get -q remove lxde* -y
-apt-get -q remove lightdm* -y
+apt-get -q remove lxde -y
+apt-get -q remove lightdm -y
 apt-get -q remove xinit -y
 apt-get -q remove git -y
 apt-get -q remove curlftpfs -y
@@ -88,7 +87,10 @@ apt-get -q remove lightdm-gtk-greeter -y
 apt-get -q remove linux-firmware -y
 apt-get -q remove xrdp -y
 apt-get -q remove xfce4 -y
-
+apt-get -q install network-manager -y
+apt-get -q autoremove --purge -y
+apt-get clean
+apt-get -q dist-upgrade
 sleep 2
 echo "upgrade successfull, welcome to 14.04.2"
 echo "upgrade gelukt, welkom bij 14.04.2"
@@ -141,7 +143,6 @@ echo "Herschrijving succesvol afgerond, upgrade starten"
 sleep 2
 apt-get -q update -y
 apt-get -q upgrade -y
-apt-get -q dist-upgrade -y
 apt-get -q -f install
 apt-get -q install systemd-sysv
 apt-get -q remove lxde -y
@@ -157,6 +158,10 @@ apt-get -q remove lightdm-gtk-greeter -y
 apt-get -q remove linux-firmware -y
 apt-get -q remove xrdp -y
 apt-get -q remove xfce4 -y
+apt-get -q install network-manager -y
+apt-get -q autoremove --purge -y
+apt-get clean
+apt-get -q dist-upgrade
 sleep 2
 echo "upgrade successfull, welcome to 14.10"
 echo "upgrade gelukt, welkom bij 14.10"
@@ -208,7 +213,6 @@ echo
 sleep 2
 apt-get -q update -y
 apt-get -q upgrade -y
-apt-get -q dist-upgrade -y
 apt-get -q -f install
 apt-get -q install systemd-sysv
 apt-get -q remove lxde -y
@@ -224,6 +228,10 @@ apt-get -q remove lightdm-gtk-greeter -y
 apt-get -q remove linux-firmware -y
 apt-get -q remove xrdp -y
 apt-get -q remove xfce4 -y
+apt-get -q install network-manager -y
+apt-get -q autoremove --purge -y
+apt-get clean
+apt-get -q dist-upgrade
 sleep 2
 echo "upgrade successfull, welcome to 15.04"
 echo "upgrade gelukt, welkom bij 15.04"
@@ -276,7 +284,6 @@ echo
 sleep 2
 apt-get -q update -y
 apt-get -q upgrade -y
-apt-get -q dist-upgrade -y
 apt-get -q -f install
 apt-get -q install systemd-sysv
 apt-get -q remove lxde -y
@@ -292,8 +299,10 @@ apt-get -q remove lightdm-gtk-greeter -y
 apt-get -q remove linux-firmware -y
 apt-get -q remove xrdp -y
 apt-get -q remove xfce4 -y
-apt-get -q dist-upgrade -y
-
+apt-get -q install network-manager -y
+apt-get -q autoremove --purge -y
+apt-get clean
+apt-get -q dist-upgrade
 sleep 2
 echo "upgrade successfull, welcome to 15.10"
 echo "upgrade gelukt, welkom bij 15.10"
@@ -304,51 +313,67 @@ echo `reboot`
 exit 1
 fi
 
-#echo
-#echo "WARNING UBUNTU 16.04 XENIAL IS CURRENTLY IN BETA AND UNSTABLE INSTALL AT YOUR OWN RISK"
-#read -p "Do you wish to install buntu shell 16.04 (warning: expirimental) (no other versions available after this one, if you press N you will exit this prompt, press Y to install 16.04 EXPIRIMENTAL)"
-#if [[ ! $REPLY =~ ^[Yy]$ ]]
-#then
-#echo
-#echo "skipping 16.04"
-#echo
-#else
-#echo
-#echo "you picked 16.04"
-#echo
-#sleep 2
-#echo "updating or downgrading to 16.04"
-#echo
-#echo "Stand by"
-#cp /etc/apt/sources.list /etc/apt/sources.list.bk
-#rm -rf /etc/apt/sources.list
-#
-#echo "deb http://ports.ubuntu.com/ xenial main restricted universe multiverse" >> /etc/apt/sources.list
-#echo "# deb-src http://ports.ubuntu.com/ xenial main restricted universe multiverse" >> /etc/apt/sources.list
-#echo >> /etc/apt/sources.list
-#echo "deb http://ports.ubuntu.com/ xenial-upgrades main restricted universe multiverse" >> /etc/apt/sources.list
-#echo "# deb-src http://ports.ubuntu.com/ xenial-upgrades main restricted universe multiverse" >> /etc/apt/sources.list
-#echo >> /etc/apt/sources.list
-#echo "deb http://ports.ubuntu.com/ xenial-security main restricted universe multiverse" >> /etc/apt/sources.list
-#echo "# deb-src http://ports.ubuntu.com/ xenial-security main restricted universe multiverse" >> /etc/apt/sources.list
-#echo >> /etc/apt/sources.list
-#echo "deb http://ports.ubuntu.com/ xenial-backports main restricted universe multiverse" >> /etc/apt/sources.list
-#echo "# deb-src http://ports.ubuntu.com/ xenial-backports main restricted universe multiverse" >> /etc/apt/sources.list
-#
-#sleep 2
-#echo 
-#echo "rewrite successfull, now launching upgrade"
-#echo
-#sleep 2
-#apt-get -q update -y
-#apt-get -q upgrade -y
-#apt-get -q dist-upgrade -y
-#apt-get -q -f install
-#apt-get -q install systemd-sysv
-#sleep 2
-#echo "upgrade successfull, welcome to 16.04 (expirimental)"
-#echo
-#echo "rebooting"
-#echo `reboot`
-#exit 1
-#fi
+echo
+echo "WARNING UBUNTU 16.04 XENIAL IS CURRENTLY IN BETA AND UNSTABLE INSTALL AT YOUR OWN RISK"
+read -p "Do you wish to install buntu shell 16.04 (warning: expirimental) (no other versions available after this one, if you press N you will exit this prompt, press Y to install 16.04 EXPIRIMENTAL)"
+if [[ ! $REPLY =~ ^[Yy]$ ]]
+then
+echo
+echo "skipping 16.04"
+echo
+else
+echo
+echo "you picked 16.04"
+echo
+sleep 2
+echo "updating or downgrading to 16.04"
+echo
+echo "Stand by"
+cp /etc/apt/sources.list /etc/apt/sources.list.bk
+rm -rf /etc/apt/sources.list
+
+echo "deb http://ports.ubuntu.com/ xenial main restricted universe multiverse" >> /etc/apt/sources.list
+echo "# deb-src http://ports.ubuntu.com/ xenial main restricted universe multiverse" >> /etc/apt/sources.list
+echo >> /etc/apt/sources.list
+echo "deb http://ports.ubuntu.com/ xenial-upgrades main restricted universe multiverse" >> /etc/apt/sources.list
+echo "# deb-src http://ports.ubuntu.com/ xenial-upgrades main restricted universe multiverse" >> /etc/apt/sources.list
+echo >> /etc/apt/sources.list
+echo "deb http://ports.ubuntu.com/ xenial-security main restricted universe multiverse" >> /etc/apt/sources.list
+echo "# deb-src http://ports.ubuntu.com/ xenial-security main restricted universe multiverse" >> /etc/apt/sources.list
+echo >> /etc/apt/sources.list
+echo "deb http://ports.ubuntu.com/ xenial-backports main restricted universe multiverse" >> /etc/apt/sources.list
+echo "# deb-src http://ports.ubuntu.com/ xenial-backports main restricted universe multiverse" >> /etc/apt/sources.list
+
+sleep 2
+echo 
+echo "rewrite successfull, now launching upgrade"
+echo
+sleep 2
+apt-get -q update -y
+apt-get -q upgrade -y
+apt-get -q -f install
+apt-get -q install systemd-sysv
+apt-get -q remove lxde -y
+apt-get -q remove lightdm -y
+apt-get -q remove xinit -y
+apt-get -q remove git -y
+apt-get -q remove curlftpfs -y
+apt-get -q remove curl -y
+apt-get -q remove alacarte -y
+apt-get -q remove libcurl4-gnutls-dev -y
+apt-get -q remove xcompmgr -y
+apt-get -q remove lightdm-gtk-greeter -y
+apt-get -q remove linux-firmware -y
+apt-get -q remove xrdp -y
+apt-get -q remove xfce4 -y
+apt-get -q install network-manager -y
+apt-get -q autoremove --purge -y
+apt-get clean
+apt-get -q dist-upgrade
+sleep 2
+echo "upgrade successfull, welcome to 16.04 (expirimental)"
+echo
+echo "rebooting"
+echo `reboot`
+exit 1
+fi
