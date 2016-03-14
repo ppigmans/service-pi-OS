@@ -31,6 +31,77 @@ echo "upgrader afsluiten"
 exit 1
 fi
 
+read -p "Do you wish to install ubuntu shell 12.04.5 (other versions are available, to skip this one press N, to use this one, press Y)"
+echo "Wilt u ubuntu shell 12.04.5 installeren? (er zijn andere versies beschikbaar, druk op N om deze versie over te slaan, om deze versie te gebruiken druk op Y)"
+if [[ ! $REPLY =~ ^[Yy]$ ]]
+then
+echo
+echo "skipping 12.04.5"
+echo "14.04.2 overslaan"
+else
+echo
+echo "you picked 12.04.5"
+echo "12.04.5 gekozen"
+sleep 2
+echo
+echo "upgrading or downgrading to 12.04.5"
+echo "Upgraden of downgraden naar 12.04.5"
+echo
+echo "Stand by"
+echo "Wachten AUB"
+echo
+cp /etc/apt/sources.list /etc/apt/sources.list.bk
+rm -rf /etc/apt/sources.list
+
+echo "deb http://ports.ubuntu.com/ precise main restricted universe multiverse" >> /etc/apt/sources.list
+echo "# deb-src http://ports.ubuntu.com/ precise main restricted universe multiverse" >> /etc/apt/sources.list
+echo >> /etc/apt/sources.list
+echo "deb http://ports.ubuntu.com/ precise-updates main restricted universe multiverse" >> /etc/apt/sources.list
+echo "# deb-src http://ports.ubuntu.com/ precise-updates main restricted universe multiverse" >> /etc/apt/sources.list
+echo >> /etc/apt/sources.list
+echo "deb http://ports.ubuntu.com/ precise-security main restricted universe multiverse" >> /etc/apt/sources.list
+echo "# deb-src http://ports.ubuntu.com/ precise-security main restricted universe multiverse" >> /etc/apt/sources.list
+echo >> /etc/apt/sources.list
+echo "deb http://ports.ubuntu.com/ precise-backports main restricted universe multiverse" >> /etc/apt/sources.list
+echo "# deb-src http://ports.ubuntu.com/ precise-backports main restricted universe multiverse" >> /etc/apt/sources.list
+
+sleep 2
+echo 
+echo "rewrite successfull, now launching upgrade"
+echo "Herschrijving succesvol afgerond, upgrade starten"
+sleep 2
+apt-get -q update -y
+apt-get -q upgrade -y
+apt-get -q -f install
+apt-get -q install systemd-sysv
+apt-get -q remove lxde -y
+apt-get -q remove lightdm -y
+apt-get -q remove xinit -y
+apt-get -q remove git -y
+apt-get -q remove curlftpfs -y
+apt-get -q remove curl -y
+apt-get -q remove alacarte -y
+apt-get -q remove libcurl4-gnutls-dev -y
+apt-get -q remove xcompmgr -y
+apt-get -q remove lightdm-gtk-greeter -y
+apt-get -q remove linux-firmware -y
+apt-get -q remove xrdp -y
+apt-get -q remove xfce4 -y
+apt-get -q install network-manager -y
+apt-get -q autoremove --purge -y
+apt-get clean
+apt-get -q dist-upgrade
+sleep 2
+echo "upgrade successfull, welcome to 12.04.5"
+echo "upgrade gelukt, welkom bij 12.04.5"
+echo
+echo "rebooting"
+echo "Herstarten"
+echo
+echo `reboot`
+exit 1
+fi
+
 read -p "Do you wish to install ubuntu shell 14.04.2 (other versions are available, to skip this one press N, to use this one, press Y)"
 echo "Wilt u ubuntu shell 14.04.2 installeren? (er zijn andere versies beschikbaar, druk op N om deze versie over te slaan, om deze versie te gebruiken druk op Y)"
 if [[ ! $REPLY =~ ^[Yy]$ ]]
