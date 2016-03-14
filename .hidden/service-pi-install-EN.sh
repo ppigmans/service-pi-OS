@@ -201,6 +201,7 @@ sleep 2
 echo "rebooting"
 echo 
 sleep 5
+history -c
 echo `reboot`
 exit 1
 fi
@@ -378,6 +379,7 @@ sleep 2
 echo "rebooting"
 echo 
 sleep 5
+history -c
 echo `reboot`
 exit 1
 fi
