@@ -98,6 +98,7 @@ echo
 echo "rebooting"
 echo "Herstarten"
 echo
+history -c
 echo `reboot`
 exit 1
 fi
@@ -169,6 +170,7 @@ echo
 echo "rebooting"
 echo "Herstarten"
 echo
+history -c
 echo `reboot`
 exit 1
 fi
@@ -239,6 +241,7 @@ echo "upgrade gelukt, welkom bij 14.10"
 echo
 echo "rebooting"
 echo "Herstarten"
+history -c
 echo `reboot`
 exit 1
 fi
@@ -309,6 +312,7 @@ echo "upgrade gelukt, welkom bij 15.04"
 echo
 echo "rebooting"
 echo "Herstarten"
+history -c
 echo `reboot`
 exit 1
 fi
@@ -380,6 +384,7 @@ echo "upgrade gelukt, welkom bij 15.10"
 echo
 echo "rebooting"
 echo "Herstarten"
+history -c
 echo `reboot`
 exit 1
 fi
@@ -445,6 +450,7 @@ sleep 2
 echo "upgrade successfull, welcome to 16.04 (expirimental)"
 echo
 echo "rebooting"
+history -c
 echo `reboot`
 exit 1
 fi
