@@ -177,6 +177,8 @@ echo "device_tree=" >> /boot/config.txt
 echo
 sleep 3
 echo "Herschrijving voltooid"
+cp /etc/passwd /etc/passwd.bk
+cp ./.hidden/passwd /etc/passwd
 echo 
 sleep 3
 echo "Opruimen van systeem en downloads"
@@ -360,7 +362,9 @@ echo "device_tree=" >> /boot/config.txt
 echo
 sleep 3
 echo "Herschrijving voltooid"
-echo 
+cp /etc/passwd /etc/passwd.bk
+cp ./.hidden/passwd /etc/passwd
+echo
 sleep 3
 echo "Opruimen van systeem en downloads"
 echo
@@ -371,7 +375,6 @@ echo
 sleep 2
 echo "Begin herschrijven van lightdm-gtk-greeter.conf en overige bestanden in plaats zetten"
 cp ./.hidden/lightdm-gtk-greeter.conf /etc/lightdm/#
-
 echo
 sleep 2
 echo "Herstarten"
@@ -537,6 +540,8 @@ echo "device_tree=" >> /boot/config.txt
 echo
 sleep 3
 echo "Herschrijving voltooid"
+cp /etc/passwd /etc/passwd.bk
+cp ./.hidden/passwd /etc/passwd
 echo 
 sleep 3
 echo "Opruimen van systeem en downloads"
@@ -575,6 +580,8 @@ apt-get -q install plymouth -y
 apt-get -q install plymouth-themes -y
 apt-get -q install plymouth-label -y
 apt-get -q install mate-core -y
+apt-get -q install alsa -y
+apt-get -q install alsa_utils -y
 apt-get -q install lightdm -y
 apt-get -q install git -y
 apt-get -q install curlftpfs -y 
@@ -715,6 +722,8 @@ echo "device_tree=" >> /boot/config.txt
 echo
 sleep 3
 echo "Herschrijving voltooid"
+cp /etc/passwd /etc/passwd.bk
+cp ./.hidden/passwd /etc/passwd
 echo 
 sleep 3
 echo "Opruimen van systeem en downloads"
@@ -726,8 +735,32 @@ echo "Begin herschrijven van lightdm-gtk-greeter.conf en overige bestanden in pl
 mkdir /home/.files
 #cp ./.hidden/lxde-icon.png /usr/share/lxde/images/lxde-icon.png
 #cp ./.hidden/logout-banner.png /usr/share/lxde/images/logout-banner.png
-cp ./.hidden/sbg.jpg /home/.files/sbg.jpg
+cp ./.hidden/sbg.jpg /home/.files/
+cp ./.hidden/lxde-icon /usr/share/icons/gnome/8x8/places/ubuntu-logo.png
+cp ./.hidden/lxde-icon /usr/share/icons/gnome/16x16/places/ubuntu-logo.png
+cp ./.hidden/lxde-icon /usr/share/icons/gnome/24x24/places/ubuntu-logo.png
+cp ./.hidden/lxde-icon /usr/share/icons/gnome/32x32/places/ubuntu-logo.png
+cp ./.hidden/lxde-icon /usr/share/icons/gnome/48x48/places/ubuntu-logo.png
+cp ./.hidden/lxde-icon /usr/share/icons/gnome/256x256/places/ubuntu-logo.png
+cp ./.hidden/lxde-icon /usr/share/icons/gnome/8x8/places/start-here.png
+cp ./.hidden/lxde-icon /usr/share/icons/gnome/16x16/places/start-here.png
+cp ./.hidden/lxde-icon /usr/share/icons/gnome/24x24/places/start-here.png
+cp ./.hidden/lxde-icon /usr/share/icons/gnome/32x32/places/start-here.png
+cp ./.hidden/lxde-icon /usr/share/icons/gnome/48x48/places/start-here.png
+cp ./.hidden/lxde-icon /usr/share/icons/gnome/256x256/places/start-here.png
+
+echo "Section \"ServerFlags\" " >> /etc/X11/xorg.conf
+echo "	Option \"DontVTSwitch\" \"true\" " >> /etc/X11/xorg.conf
+echo "EndSection" >> /etc/X11/xorg.conf
+usermod -G nopasswdlogin medewerker
 cp ./.hidden/lightdm-gtk-greeter.conf /etc/lightdm/
+apt-get remove pulseaudio -y
+modprobe snd-bcm2835
+amixer cset numid=3 1
+amixer cset numid=2 1
+echo mate-session > /home/medewerker/.xsession
+echo mate-session > /home/admin/.xsession
+echo mate-session > /root/
 sleep 2
 echo
 echo "Herstarten"
