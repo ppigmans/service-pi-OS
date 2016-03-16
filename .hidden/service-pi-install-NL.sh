@@ -736,18 +736,14 @@ mkdir /home/.files
 #cp ./.hidden/lxde-icon.png /usr/share/lxde/images/lxde-icon.png
 #cp ./.hidden/logout-banner.png /usr/share/lxde/images/logout-banner.png
 cp ./.hidden/sbg.jpg /home/.files/
-cp ./.hidden/lxde-icon /usr/share/icons/gnome/8x8/places/ubuntu-logo.png
-cp ./.hidden/lxde-icon /usr/share/icons/gnome/16x16/places/ubuntu-logo.png
-cp ./.hidden/lxde-icon /usr/share/icons/gnome/24x24/places/ubuntu-logo.png
-cp ./.hidden/lxde-icon /usr/share/icons/gnome/32x32/places/ubuntu-logo.png
-cp ./.hidden/lxde-icon /usr/share/icons/gnome/48x48/places/ubuntu-logo.png
-cp ./.hidden/lxde-icon /usr/share/icons/gnome/256x256/places/ubuntu-logo.png
-cp ./.hidden/lxde-icon /usr/share/icons/gnome/8x8/places/start-here.png
-cp ./.hidden/lxde-icon /usr/share/icons/gnome/16x16/places/start-here.png
-cp ./.hidden/lxde-icon /usr/share/icons/gnome/24x24/places/start-here.png
-cp ./.hidden/lxde-icon /usr/share/icons/gnome/32x32/places/start-here.png
-cp ./.hidden/lxde-icon /usr/share/icons/gnome/48x48/places/start-here.png
-cp ./.hidden/lxde-icon /usr/share/icons/gnome/256x256/places/start-here.png
+cp ./.hidden/lxde-icon.png /usr/share/icons/gnome/24x24/places/ubuntu-logo.png
+cp ./.hidden/lxde-icon.png /usr/share/icons/gnome/32x32/places/ubuntu-logo.png
+cp ./.hidden/lxde-icon.png /usr/share/icons/gnome/48x48/places/ubuntu-logo.png
+cp ./.hidden/lxde-icon.png /usr/share/icons/gnome/256x256/places/ubuntu-logo.png
+cp ./.hidden/lxde-icon.png /usr/share/icons/gnome/24x24/places/start-here.png
+cp ./.hidden/lxde-icon.png /usr/share/icons/gnome/32x32/places/start-here.png
+cp ./.hidden/lxde-icon.png /usr/share/icons/gnome/48x48/places/start-here.png
+cp ./.hidden/lxde-icon.png /usr/share/icons/gnome/256x256/places/start-here.png
 
 echo "Section \"ServerFlags\" " >> /etc/X11/xorg.conf
 echo "	Option \"DontVTSwitch\" \"true\" " >> /etc/X11/xorg.conf

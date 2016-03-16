@@ -74,8 +74,10 @@ apt-get -q update -y
 apt-get -q upgrade -y
 apt-get -q -f install
 apt-get -q install systemd-sysv
-apt-get -q remove lxde -y
-apt-get -q remove lightdm -y
+apt-get -q remove lxde* -y
+apt-get -q remove lightdm* -y
+apt-get -q remove xfce4* -y
+apt-get -q remove mate* -y
 apt-get -q remove xinit -y
 apt-get -q remove git -y
 apt-get -q remove curlftpfs -y
@@ -83,10 +85,8 @@ apt-get -q remove curl -y
 apt-get -q remove alacarte -y
 apt-get -q remove libcurl4-gnutls-dev -y
 apt-get -q remove xcompmgr -y
-apt-get -q remove lightdm-gtk-greeter -y
 apt-get -q remove linux-firmware -y
 apt-get -q remove xrdp -y
-apt-get -q remove xfce4 -y
 apt-get -q install network-manager -y
 apt-get -q autoremove --purge -y
 apt-get clean
@@ -146,8 +146,10 @@ apt-get -q update -y
 apt-get -q upgrade -y
 apt-get -q -f install
 apt-get -q install systemd-sysv
-apt-get -q remove lxde -y
-apt-get -q remove lightdm -y
+apt-get -q remove lxde* -y
+apt-get -q remove lightdm* -y
+apt-get -q remove xfce4* -y
+apt-get -q remove mate* -y
 apt-get -q remove xinit -y
 apt-get -q remove git -y
 apt-get -q remove curlftpfs -y
@@ -155,10 +157,8 @@ apt-get -q remove curl -y
 apt-get -q remove alacarte -y
 apt-get -q remove libcurl4-gnutls-dev -y
 apt-get -q remove xcompmgr -y
-apt-get -q remove lightdm-gtk-greeter -y
 apt-get -q remove linux-firmware -y
 apt-get -q remove xrdp -y
-apt-get -q remove xfce4 -y
 apt-get -q install network-manager -y
 apt-get -q autoremove --purge -y
 apt-get clean
@@ -218,8 +218,10 @@ apt-get -q update -y
 apt-get -q upgrade -y
 apt-get -q -f install
 apt-get -q install systemd-sysv
-apt-get -q remove lxde -y
-apt-get -q remove lightdm -y
+apt-get -q remove lxde* -y
+apt-get -q remove lightdm* -y
+apt-get -q remove xfce4* -y
+apt-get -q remove mate* -y
 apt-get -q remove xinit -y
 apt-get -q remove git -y
 apt-get -q remove curlftpfs -y
@@ -227,10 +229,8 @@ apt-get -q remove curl -y
 apt-get -q remove alacarte -y
 apt-get -q remove libcurl4-gnutls-dev -y
 apt-get -q remove xcompmgr -y
-apt-get -q remove lightdm-gtk-greeter -y
 apt-get -q remove linux-firmware -y
 apt-get -q remove xrdp -y
-apt-get -q remove xfce4 -y
 apt-get -q install network-manager -y
 apt-get -q autoremove --purge -y
 apt-get clean
@@ -289,8 +289,10 @@ apt-get -q update -y
 apt-get -q upgrade -y
 apt-get -q -f install
 apt-get -q install systemd-sysv
-apt-get -q remove lxde -y
-apt-get -q remove lightdm -y
+apt-get -q remove lxde* -y
+apt-get -q remove lightdm* -y
+apt-get -q remove xfce4* -y
+apt-get -q remove mate* -y
 apt-get -q remove xinit -y
 apt-get -q remove git -y
 apt-get -q remove curlftpfs -y
@@ -298,10 +300,8 @@ apt-get -q remove curl -y
 apt-get -q remove alacarte -y
 apt-get -q remove libcurl4-gnutls-dev -y
 apt-get -q remove xcompmgr -y
-apt-get -q remove lightdm-gtk-greeter -y
 apt-get -q remove linux-firmware -y
 apt-get -q remove xrdp -y
-apt-get -q remove xfce4 -y
 apt-get -q install network-manager -y
 apt-get -q autoremove --purge -y
 apt-get clean
@@ -361,8 +361,10 @@ apt-get -q update -y
 apt-get -q upgrade -y
 apt-get -q -f install
 apt-get -q install systemd-sysv
-apt-get -q remove lxde -y
-apt-get -q remove lightdm -y
+apt-get -q remove lxde* -y
+apt-get -q remove lightdm* -y
+apt-get -q remove xfce4* -y
+apt-get -q remove mate* -y
 apt-get -q remove xinit -y
 apt-get -q remove git -y
 apt-get -q remove curlftpfs -y
@@ -370,10 +372,8 @@ apt-get -q remove curl -y
 apt-get -q remove alacarte -y
 apt-get -q remove libcurl4-gnutls-dev -y
 apt-get -q remove xcompmgr -y
-apt-get -q remove lightdm-gtk-greeter -y
 apt-get -q remove linux-firmware -y
 apt-get -q remove xrdp -y
-apt-get -q remove xfce4 -y
 apt-get -q install network-manager -y
 apt-get -q autoremove --purge -y
 apt-get clean
@@ -429,8 +429,10 @@ apt-get -q update -y
 apt-get -q upgrade -y
 apt-get -q -f install
 apt-get -q install systemd-sysv
-apt-get -q remove lxde -y
-apt-get -q remove lightdm -y
+apt-get -q remove lxde* -y
+apt-get -q remove lightdm* -y
+apt-get -q remove xfce4* -y
+apt-get -q remove mate* -y
 apt-get -q remove xinit -y
 apt-get -q remove git -y
 apt-get -q remove curlftpfs -y
@@ -438,10 +440,8 @@ apt-get -q remove curl -y
 apt-get -q remove alacarte -y
 apt-get -q remove libcurl4-gnutls-dev -y
 apt-get -q remove xcompmgr -y
-apt-get -q remove lightdm-gtk-greeter -y
 apt-get -q remove linux-firmware -y
 apt-get -q remove xrdp -y
-apt-get -q remove xfce4 -y
 apt-get -q install network-manager -y
 apt-get -q autoremove --purge -y
 apt-get clean
