@@ -752,6 +752,7 @@ usermod -G nopasswdlogin medewerker
 cp ./.hidden/lightdm-gtk-greeter.conf /etc/lightdm/
 apt-get remove pulseaudio -y
 modprobe snd-bcm2835
+echo "snd-bcm2835" >> /etc/modules
 amixer cset numid=3 1
 amixer cset numid=2 1
 echo mate-session > /home/medewerker/.xsession
