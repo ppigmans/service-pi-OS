@@ -173,7 +173,8 @@ echo "sdram_freq=500" >> /boot/config.txt
 echo "over_voltage=2" >> /boot/config.txt
 echo "dtoverlay=vc4-kms-v3d" >> /boot/config.txt
 echo "device_tree=" >> /boot/config.txt
-
+cp /etc/modules /etc/modules.bk
+cp ./.hidden/modules /etc/modules
 echo
 sleep 3
 echo "Herschrijving voltooid"
@@ -196,7 +197,10 @@ cp ./.hidden/lightdm-gtk-greeter.conf /etc/lightdm/
 cp ./.hidden/sbg.jpg /usr/share/lxde/wallpapers/lxde_blue.jpg
 cp ./.hidden/sbg.jpg /usr/share/lxde/wallpapers/lxde_red.jpg
 cp ./.hidden/sbb.jpg /usr/share/lxde/wallpapers/lxde_green.jpg
-
+apt-get remove pulseaudio -y
+modprobe snd-bcm2835
+amixer cset numid=3 1
+amixer cset numid=2 1
 echo
 sleep 2
 echo "Herstarten"
@@ -358,7 +362,8 @@ echo "sdram_freq=500" >> /boot/config.txt
 echo "over_voltage=2" >> /boot/config.txt
 echo "dtoverlay=vc4-kms-v3d" >> /boot/config.txt
 echo "device_tree=" >> /boot/config.txt
-
+cp /etc/modules /etc/modules.bk
+cp ./.hidden/modules /etc/modules
 echo
 sleep 3
 echo "Herschrijving voltooid"
@@ -374,7 +379,11 @@ apt-get -qq clean -y
 echo
 sleep 2
 echo "Begin herschrijven van lightdm-gtk-greeter.conf en overige bestanden in plaats zetten"
-cp ./.hidden/lightdm-gtk-greeter.conf /etc/lightdm/#
+cp ./.hidden/lightdm-gtk-greeter.conf /etc/lightdm
+apt-get remove pulseaudio -y
+modprobe snd-bcm2835
+amixer cset numid=3 1
+amixer cset numid=2 1
 echo
 sleep 2
 echo "Herstarten"
@@ -536,7 +545,8 @@ echo "sdram_freq=500" >> /boot/config.txt
 echo "over_voltage=2" >> /boot/config.txt
 echo "dtoverlay=vc4-kms-v3d" >> /boot/config.txt
 echo "device_tree=" >> /boot/config.txt
-
+cp /etc/modules /etc/modules.bk
+cp ./.hidden/modules /etc/modules
 echo
 sleep 3
 echo "Herschrijving voltooid"
@@ -555,6 +565,10 @@ mkdir /home/.files
 #cp ./.hidden/logout-banner.png /usr/share/lxde/images/logout-banner.png
 cp ./.hidden/sbg.jpg /home/.files/sbg.jpg
 cp ./.hidden/lightdm-gtk-greeter.conf /etc/lightdm/
+apt-get remove pulseaudio -y
+modprobe snd-bcm2835
+amixer cset numid=3 1
+amixer cset numid=2 1
 sleep 2
 echo
 echo "Herstarten"
@@ -718,7 +732,8 @@ echo "sdram_freq=500" >> /boot/config.txt
 echo "over_voltage=2" >> /boot/config.txt
 echo "dtoverlay=vc4-kms-v3d" >> /boot/config.txt
 echo "device_tree=" >> /boot/config.txt
-
+cp /etc/modules /etc/modules.bk
+cp ./.hidden/modules /etc/modules
 echo
 sleep 3
 echo "Herschrijving voltooid"
@@ -752,7 +767,6 @@ usermod -G nopasswdlogin medewerker
 cp ./.hidden/lightdm-gtk-greeter.conf /etc/lightdm/
 apt-get remove pulseaudio -y
 modprobe snd-bcm2835
-echo "snd-bcm2835" >> /etc/modules
 amixer cset numid=3 1
 amixer cset numid=2 1
 echo mate-session > /home/medewerker/.xsession
