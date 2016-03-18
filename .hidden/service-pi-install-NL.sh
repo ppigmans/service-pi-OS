@@ -564,6 +564,7 @@ mkdir /home/.files
 #cp ./.hidden/lxde-icon.png /usr/share/lxde/images/lxde-icon.png
 #cp ./.hidden/logout-banner.png /usr/share/lxde/images/logout-banner.png
 cp ./.hidden/sbg.jpg /home/.files/sbg.jpg
+cp /home/.files/sbg.jpg /usr/share/backgrounds/xfce/xfce-blue.jpg
 cp ./.hidden/lightdm-gtk-greeter.conf /etc/lightdm/
 apt-get remove pulseaudio -y
 modprobe snd-bcm2835
