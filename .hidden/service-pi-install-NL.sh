@@ -20,6 +20,37 @@ echo
 sleep 1
 echo "enige stroom verlies kan zorgen voor het corruptie van het systeem"
 echo
+sleep 2
+read -p "Wilt u alles eerst verwijderen van vorige DE's? (Y/N)"
+echo
+if [[ ! $REPLY =~ ^[Yy]$ ]]
+	then
+	echo
+else
+echo "verwijderen"
+sleep 3
+apt-get -q remove --purge -y lxde*
+apt-get -q remove --purge -y lightdm*
+apt-get -q remove --purge -y xfce*
+apt-get -q remove --purge -y mate*
+apt-get -q remove --purge -y lxqt*
+apt-get -q remove --purge -y xinit*
+apt-get -q remove --purge -y git*
+apt-get -q remove --purge -y curlftpfs*
+apt-get -q remove --purge -y alacarte*
+apt-get -q remove --purge -y xcompmgr*
+apt-get -q remove --purge -y linux-firmware*
+apt-get -q remove --purge -y curl*
+apt-get -q remove --purge -y libcurl4-gnutls-dev*
+apt-get -q remove --purge -y libxerces-c3*
+apt-get -q remove --purge -y icaclient*
+apt-get -q remove --purge -y nomachine*
+apt-get autoremove --purge -y
+apt-get clean
+reboot 
+exit 1
+fi
+
 echo 
 sleep 2
 read -p "Wilt u LXDE installeren (druk op Y of N )" -n 1 -r 
@@ -566,6 +597,7 @@ mkdir /home/.files
 cp ./.hidden/sbg.jpg /home/.files/sbg.jpg
 cp /home/.files/sbg.jpg /usr/share/backgrounds/xfce/xfce-blue.jpg
 cp ./.hidden/lightdm-gtk-greeter.conf /etc/lightdm/
+apt-get -f install -y
 apt-get remove pulseaudio -y
 modprobe snd-bcm2835
 amixer cset numid=3 1
