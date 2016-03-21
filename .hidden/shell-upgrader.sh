@@ -411,8 +411,8 @@ rm -rf /etc/apt/sources.list
 echo "deb http://ports.ubuntu.com/ xenial main restricted universe multiverse" >> /etc/apt/sources.list
 echo "# deb-src http://ports.ubuntu.com/ xenial main restricted universe multiverse" >> /etc/apt/sources.list
 echo >> /etc/apt/sources.list
-echo "deb http://ports.ubuntu.com/ xenial-upgrades main restricted universe multiverse" >> /etc/apt/sources.list
-echo "# deb-src http://ports.ubuntu.com/ xenial-upgrades main restricted universe multiverse" >> /etc/apt/sources.list
+echo "deb http://ports.ubuntu.com/ xenial-updates main restricted universe multiverse" >> /etc/apt/sources.list
+echo "# deb-src http://ports.ubuntu.com/ xenial-updates main restricted universe multiverse" >> /etc/apt/sources.list
 echo >> /etc/apt/sources.list
 echo "deb http://ports.ubuntu.com/ xenial-security main restricted universe multiverse" >> /etc/apt/sources.list
 echo "# deb-src http://ports.ubuntu.com/ xenial-security main restricted universe multiverse" >> /etc/apt/sources.list
