@@ -228,7 +228,8 @@ cp ./.hidden/lightdm-gtk-greeter.conf /etc/lightdm/
 cp ./.hidden/sbg.jpg /usr/share/lxde/wallpapers/lxde_blue.jpg
 cp ./.hidden/sbg.jpg /usr/share/lxde/wallpapers/lxde_red.jpg
 cp ./.hidden/sbb.jpg /usr/share/lxde/wallpapers/lxde_green.jpg
-apt-get remove pulseaudio -y
+apt-get -qq remove pulseaudio -y
+apt-get -qq remove chromium*
 modprobe snd-bcm2835
 amixer cset numid=3 1
 amixer cset numid=2 1
