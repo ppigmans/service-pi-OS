@@ -31,22 +31,16 @@ echo "upgrader afsluiten"
 exit 1
 fi
 
-read -p "Do you wish to install ubuntu shell 14.04.2 (other versions are available, to skip this one press N, to use this one, press Y)"
-echo "Wilt u ubuntu shell 14.04.2 installeren? (er zijn andere versies beschikbaar, druk op N om deze versie over te slaan, om deze versie te gebruiken druk op Y)"
-if [[ ! $REPLY =~ ^[Yy]$ ]]
-then
-echo
-echo "skipping 14.04.2"
-echo "14.04.2 overslaan"
-else
-echo
-echo "you picked 14.04.2"
-echo "14.04.2 gekozen"
-sleep 2
-echo
-echo "upgrading or downgrading to 14.04.2"
-echo "Upgraden of downgraden naar 14.04.2"
-echo
+PS3="Pick Your Version (1-5):"
+echo "Kies uw versie (1-5):"
+select name in 14.04 14.10 15.04 15.10 16.04
+do
+	break
+done
+echo "You chose $name."
+echo "U koos $name."
+
+if [ "$name" = "14.04" ]; then
 echo "Stand by"
 echo "Wachten AUB"
 echo
@@ -87,21 +81,8 @@ echo `reboot`
 exit 1
 fi
 
-read -p "Do you wish to install ubuntu shell 14.10 (other versions are available, to skip this one press N, to use this one, press Y)"
-echo  "Wilt u ubuntu shell 14.10 installeren? (er zijn andere versies beschikbaar, druk op N om deze versie over te slaan, om deze versie te gebruiken druk op Y)"
-if [[ ! $REPLY =~ ^[Yy]$ ]]
-then
-echo
-echo "skipping 14.10"
-echo "14.10 overslaan"
-else
-echo
-echo "you picked 14.10"
-echo "14.10 gekozen"
-sleep 2
-echo
-echo "updgrading or downgrading to 14.10"
-echo "upgraden of downgraden naar 14.10"
+
+if [ "$name" = "14.10" ]; then
 echo
 echo "Stand by"
 echo "Wachten AUB"
@@ -142,21 +123,8 @@ echo `reboot`
 exit 1
 fi
 
-echo
-read -p "Do you wish to install ubuntu shell 15.04 (other versions are available, to skip this one press N, to use this one, press Y)"
-echo  "Wilt u ubuntu shell 15.04 installeren? (er zijn andere versies beschikbaar, druk op N om deze versie over te slaan, om deze versie te gebruiken druk op Y)"
-if [[ ! $REPLY =~ ^[Yy]$ ]]
-then
-echo
-echo "skipping 15.04"
-echo "15.04 overslaan"
-else
-echo
-echo "you picked 15.04"
-echo "15.04 gekozen"
-sleep 2
-echo "updating or downgrading to 15.04"
-echo "upgraden of downgraden naar 15.04"
+
+if [ "$name" = "15.04" ]; then
 echo
 echo "Stand by"
 echo "wachten AUB"
@@ -197,23 +165,7 @@ echo `reboot`
 exit 1
 fi
 
-echo
-read -p "Do you wish to install buntu shell 15.10 (other versions are available, to skip this one press N, to use this one, press Y)"
-echo  "Wilt u ubuntu shell 15.10 installeren? (er zijn andere versies beschikbaar, druk op N om deze versie over te slaan, om deze versie te gebruiken druk op Y)"
-if [[ ! $REPLY =~ ^[Yy]$ ]]
-then
-echo
-echo "skipping 15.10"
-echo "15.10 overslaan"
-else
-echo
-echo "you picked 15.10"
-echo "15.10 gekozen"
-sleep 2
-echo
-echo "upgrading or downgrading to 15.10"
-echo "upgraden of downgraden naar 15.10"
-echo
+if [ "$name" = "15.10" ]; then
 echo "Stand by"
 echo "wachten AUB"
 cp /etc/apt/sources.list /etc/apt/sources.list.bk
@@ -253,22 +205,10 @@ echo `reboot`
 exit 1
 fi
 
-echo
-echo "WARNING UBUNTU 16.04 XENIAL IS CURRENTLY IN BETA AND UNSTABLE INSTALL AT YOUR OWN RISK"
-read -p "Do you wish to install buntu shell 16.04 (warning: expirimental) (no other versions available after this one, if you press N you will exit this prompt, press Y to install 16.04 EXPIRIMENTAL)"
-if [[ ! $REPLY =~ ^[Yy]$ ]]
-then
-echo
-echo "skipping 16.04"
-echo
-else
-echo
-echo "you picked 16.04"
-echo
-sleep 2
-echo "updating or downgrading to 16.04"
-echo
+if [ "$name" = "16.04" ]; then
+
 echo "Stand by"
+echo "Wachten AUB"
 cp /etc/apt/sources.list /etc/apt/sources.list.bk
 rm -rf /etc/apt/sources.list
 
