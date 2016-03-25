@@ -51,14 +51,15 @@ reboot
 exit 1
 fi
 
-echo 
-sleep 2
-read -p "Wilt u LXDE installeren (druk op Y of N )" -n 1 -r 
-echo 
-if [[ ! $REPLY =~ ^[Yy]$ ]]
-then
-echo "Gaat LXDE niet installeren"
-else
+PS3= "Kies uw DE (1-5)(LXQT is nog niet getest, EL = enlightenment):" 
+select name in LXDE XFCE LXQT MATE EL
+do 
+ 	break 
+done 
+echo "U koos $name."
+
+
+if [ "$name" = "LXDE" ]; then
 echo 
 echo "Begin installatie van LXDE "
 echo
@@ -243,12 +244,7 @@ echo `reboot`
 exit 1
 fi
 
-read -p "Wilt u LXQT installeren (druk op Y of N )" -n 1 -r 
-echo 
-if [[ ! $REPLY =~ ^[Yy]$ ]]
-then
-echo "Gaat LXQT niet installeren"
-else
+if [ "$name" = "LXQT" ]; then
 echo 
 echo "Begin installatie van LXQT"
 echo
@@ -426,12 +422,8 @@ echo `reboot`
 exit 1
 fi
 
+if [ "$name" = "XFCE" ]; then
 echo
-read -p "Wilt u XFCE4 installeren (druk op Y of N ))"
-if [[ ! $REPLY =~ ^[Yy]$ ]]
-then
-echo "Gaat XFCE4 niet installeren"
-else
 echo "Begin van de installatie van XFCE4"
 echo
 sleep 3
@@ -613,12 +605,9 @@ echo `reboot`
 exit 1
 fi
 
+if [ "$name" = "MATE" ]; then
 echo "Mate is alleen beschikbaar vanaf 14.10"
-read -p "Wilt u MATE installeren (druk op Y of N ))"
-if [[ ! $REPLY =~ ^[Yy]$ ]]
-then
-echo "Gaat MATE niet installeren"
-else
+echo
 echo "Begin van de installatie van MATE"
 echo
 sleep 3
@@ -813,5 +802,10 @@ echo
 sleep 5
 history -c
 echo `reboot`
+exit 1
+fi
+
+if [ "$name" = "EL" ]; then
+Echo "WIP"
 exit 1
 fi
