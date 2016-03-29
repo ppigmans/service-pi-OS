@@ -430,22 +430,39 @@ echo
 sleep 3
 
 apt-get -q update
+apt-get -f install -y
 apt-get -q install plymouth -y
+apt-get -f install -y
 apt-get -q install plymouth-themes -y
+apt-get -f install -y
 apt-get -q install plymouth-label -y
+apt-get -f install -y
 apt-get -q install xfce4 -y
+apt-get -f install -y
 apt-get -q install lightdm -y
+apt-get -f install -y
 apt-get -q install git -y
+apt-get -f install -y
 apt-get -q install curlftpfs -y 
+apt-get -f install -y
 apt-get -q install curl -y
+apt-get -f install -y
 apt-get -q install alacarte -y
+apt-get -f install -y
 apt-get -q install libcurl4-gnutls-dev -y
+apt-get -f install -y
 apt-get -q install xcompmgr -y
+apt-get -f install -y
 apt-get -q install lightdm-gtk-greeter -y
+apt-get -f install -y
 apt-get -q install linux-firmware
+apt-get -f install -y
 apt-get -q install libxerces-c3.1 -y
+apt-get -f install -y
 dpkg -i ./.hidden/NX.deb
+apt-get -f install -y
 dpkg -i ./.hidden/citrix-rec.deb
+apt-get -f install -y
 ln /usr/lib/arm-linux-gnueabihf/libcurl.so /usr/lib/arm-linux-gnueabihf/libcurl.so.4
 ln -s /usr/share/ca-certificates/mozilla/* /opt/Citrix/ICAClient/keystore/cacerts
 c_rehash /opt/Citrix/ICAClient/keystore/cacerts
@@ -581,18 +598,24 @@ echo
 sleep 3
 echo "Opruimen van systeem en downloads"
 echo
+apt-get -f install -y
 apt-get -qq autoremove --purge -y
+apt-get -f install -y
 apt-get -qq clean -y
+apt-get -f install -y
 sleep 2
 echo "Begin herschrijven van lightdm-gtk-greeter.conf en overige bestanden in plaats zetten"
 mkdir /home/.files
 #cp ./.hidden/lxde-icon.png /usr/share/lxde/images/lxde-icon.png
 #cp ./.hidden/logout-banner.png /usr/share/lxde/images/logout-banner.png
 cp ./.hidden/sbg.jpg /home/.files/sbg.jpg
+cp ./.hidden/sbg.jpg/home/.files/sbb.jpg
+cp /home/.files/sbb.jpg /usr/share/backgrounds/xfce/xfce-teal.jpg
 cp /home/.files/sbg.jpg /usr/share/backgrounds/xfce/xfce-blue.jpg
 cp ./.hidden/lightdm-gtk-greeter.conf /etc/lightdm/
 apt-get -f install -y
 apt-get remove pulseaudio -y
+apt-get -f install -y
 modprobe snd-bcm2835
 amixer cset numid=3 1
 amixer cset numid=2 1
