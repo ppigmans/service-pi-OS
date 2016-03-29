@@ -29,24 +29,43 @@ if [[ ! $REPLY =~ ^[Yy]$ ]]
 else
 echo "verwijderen"
 sleep 3
+apt-get -f install -y
 apt-get -q remove --purge -y lxde*
+apt-get -f install -y
 apt-get -q remove --purge -y lightdm*
+apt-get -f install -y
 apt-get -q remove --purge -y xfce*
+apt-get -f install -y
 apt-get -q remove --purge -y mate*
+apt-get -f install -y
 apt-get -q remove --purge -y e17*
+apt-get -f install -y
 apt-get -q remove --purge -y lxqt*
+apt-get -f install -y
 apt-get -q remove --purge -y xinit*
+apt-get -f install -y
 apt-get -q remove --purge -y git*
+apt-get -f install -y
 apt-get -q remove --purge -y curlftpfs*
+apt-get -f install -y
 apt-get -q remove --purge -y alacarte*
+apt-get -f install -y
 apt-get -q remove --purge -y xcompmgr*
+apt-get -f install -y
 apt-get -q remove --purge -y linux-firmware*
+apt-get -f install -y
 apt-get -q remove --purge -y curl*
+apt-get -f install -y
 apt-get -q remove --purge -y libcurl4-gnutls-dev*
+apt-get -f install -y
 apt-get -q remove --purge -y libxerces-c3*
+apt-get -f install -y
 apt-get -q remove --purge -y icaclient*
+apt-get -f install -y
 apt-get -q remove --purge -y nomachine*
+apt-get -f install -y
 apt-get autoremove --purge -y
+apt-get -f install -y
 apt-get clean
 reboot 
 exit 1
@@ -67,22 +86,39 @@ echo
 sleep 3
 
 apt-get -q update
+apt-get -f install -y
 apt-get -q install plymouth -y
+apt-get -f install -y
 apt-get -q install plymouth-themes -y
+apt-get -f install -y
 apt-get -q install plymouth-label -y
+apt-get -f install -y
 apt-get -q install lxde -y
+apt-get -f install -y
 apt-get -q install lightdm -y
+apt-get -f install -y
 apt-get -q install xinit -y
+apt-get -f install -y
 apt-get -q install git -y
+apt-get -f install -y
 apt-get -q install curlftpfs -y
+apt-get -f install -y
 apt-get -q install curl -y
+apt-get -f install -y
 apt-get -q install alacarte -y
+apt-get -f install -y
 apt-get -q install libcurl4-gnutls-dev -y
+apt-get -f install -y
 apt-get -q install xcompmgr -y
+apt-get -f install -y
 apt-get -q install linux-firmware
+apt-get -f install -y
 apt-get -q install libxerces-c3.1 -y
+apt-get -f install -y
 dpkg -i ./.hidden/NX.deb
+apt-get -f install -y
 dpkg -i ./.hidden/citrix-rec.deb
+apt-get -f install -y
 ln /usr/lib/arm-linux-gnueabihf/libcurl.so /usr/lib/arm-linux-gnueabihf/libcurl.so.4
 ln -s /usr/share/ca-certificates/mozilla/* /opt/Citrix/ICAClient/keystore/cacerts
 c_rehash /opt/Citrix/ICAClient/keystore/cacerts
@@ -217,10 +253,15 @@ echo
 sleep 3
 echo "Opruimen van systeem en downloads"
 echo
+apt-get -f install -y
 apt-get install lightdm-gtk-greeter -y
+apt-get -f install -y
 apt-get -qq remove --purge -y lxdm
+apt-get -f install -y
 apt-get -qq autoremove --purge -y
+apt-get -f install -y
 apt-get -qq clean -y
+apt-get -f install -y
 echo
 sleep 2
 echo "Begin herschrijven van lightdm-gtk-greeter.conf en overige bestanden in plaats zetten"
@@ -230,8 +271,11 @@ cp ./.hidden/lightdm-gtk-greeter.conf /etc/lightdm/
 cp ./.hidden/sbg.jpg /usr/share/lxde/wallpapers/lxde_blue.jpg
 cp ./.hidden/sbg.jpg /usr/share/lxde/wallpapers/lxde_red.jpg
 cp ./.hidden/sbb.jpg /usr/share/lxde/wallpapers/lxde_green.jpg
+apt-get -f install -y
 apt-get -qq remove pulseaudio -y
+apt-get -f install -y
 apt-get -qq remove chromium*
+apt-get -f install -y
 modprobe snd-bcm2835
 amixer cset numid=3 1
 amixer cset numid=2 1
