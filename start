@@ -48,6 +48,7 @@ echo "You picked $name."
 if [ "$name" = "Shell-updater" ]; then
 echo 
 echo "Starting shell updater"
+sleep 2
 sh ./.hidden/shell-updater.sh
 exit 1
 fi
@@ -56,6 +57,7 @@ if [ "$name" = "service-pi-installer-NL" ]; then
 echo
 echo "starting service-pi installer in dutch"
 echo "Starten van service-pi installer in het nederlands"
+sleep 2
 sh ./.hidden/service-pi-install-NL.sh
 exit 1
 fi
@@ -63,6 +65,7 @@ fi
 if [ "$name" = "service-pi-installer-EN" ]; then
 echo
 echo "starting service-pi installer in English"
+sleep 2
 sh ./.hidden/service-pi-install-EN.sh
 exit 1
 fi
@@ -70,5 +73,6 @@ fi
 if [ "$name" = "exit" ]; then
 echo
 echo "Exitting"
+sleep 2
 exit 1
 fi
