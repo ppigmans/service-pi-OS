@@ -21,63 +21,13 @@ sleep 1
 echo "enige stroom verlies kan zorgen voor het corruptie van het systeem"
 echo
 sleep 2
-read -p "Wilt u alles eerst verwijderen van vorige DE's? (Y/N)"
-echo
-if [[ ! $REPLY =~ ^[Yy]$ ]]
-	then
-	echo
-else
-echo "verwijderen"
-sleep 3
-apt-get -f install -y
-apt-get -q remove --purge -y lxde*
-apt-get -f install -y
-apt-get -q remove --purge -y lightdm*
-apt-get -f install -y
-apt-get -q remove --purge -y xfce*
-apt-get -f install -y
-apt-get -q remove --purge -y mate*
-apt-get -f install -y
-apt-get -q remove --purge -y e17*
-apt-get -f install -y
-apt-get -q remove --purge -y lxqt*
-apt-get -f install -y
-apt-get -q remove --purge -y xinit*
-apt-get -f install -y
-apt-get -q remove --purge -y git*
-apt-get -f install -y
-apt-get -q remove --purge -y curlftpfs*
-apt-get -f install -y
-apt-get -q remove --purge -y alacarte*
-apt-get -f install -y
-apt-get -q remove --purge -y xcompmgr*
-apt-get -f install -y
-apt-get -q remove --purge -y linux-firmware*
-apt-get -f install -y
-apt-get -q remove --purge -y curl*
-apt-get -f install -y
-apt-get -q remove --purge -y libcurl4-gnutls-dev*
-apt-get -f install -y
-apt-get -q remove --purge -y libxerces-c3*
-apt-get -f install -y
-apt-get -q remove --purge -y icaclient*
-apt-get -f install -y
-apt-get -q remove --purge -y nomachine*
-apt-get -f install -y
-apt-get autoremove --purge -y
-apt-get -f install -y
-apt-get clean
-reboot 
-exit 1
-fi
 
-PS3= "Kies uw DE (1-5)(LXQT is nog niet getest, EL = enlightenment):" 
-select name in LXDE XFCE LXQT MATE EL
+PS3= "Kies uw DE (1-6)(LXQT is nog niet getest, EL = enlightenment):" 
+select name in LXDE XFCE LXQT MATE EL Verwijderen
 do 
  	break 
 done 
 echo "U koos $name."
-
 
 if [ "$name" = "LXDE" ]; then
 echo 
@@ -1095,5 +1045,51 @@ echo
 sleep 5
 history -c
 echo `reboot`
+exit 1
+fi
+
+
+if [ "$name" = "Verwijderen" ]; then
+echo "verwijderen"
+sleep 3
+apt-get -f install -y
+apt-get -q remove --purge -y lxde*
+apt-get -f install -y
+apt-get -q remove --purge -y lightdm*
+apt-get -f install -y
+apt-get -q remove --purge -y xfce*
+apt-get -f install -y
+apt-get -q remove --purge -y mate*
+apt-get -f install -y
+apt-get -q remove --purge -y e17*
+apt-get -f install -y
+apt-get -q remove --purge -y lxqt*
+apt-get -f install -y
+apt-get -q remove --purge -y xinit*
+apt-get -f install -y
+apt-get -q remove --purge -y git*
+apt-get -f install -y
+apt-get -q remove --purge -y curlftpfs*
+apt-get -f install -y
+apt-get -q remove --purge -y alacarte*
+apt-get -f install -y
+apt-get -q remove --purge -y xcompmgr*
+apt-get -f install -y
+apt-get -q remove --purge -y linux-firmware*
+apt-get -f install -y
+apt-get -q remove --purge -y curl*
+apt-get -f install -y
+apt-get -q remove --purge -y libcurl4-gnutls-dev*
+apt-get -f install -y
+apt-get -q remove --purge -y libxerces-c3*
+apt-get -f install -y
+apt-get -q remove --purge -y icaclient*
+apt-get -f install -y
+apt-get -q remove --purge -y nomachine*
+apt-get -f install -y
+apt-get autoremove --purge -y
+apt-get -f install -y
+apt-get clean
+reboot 
 exit 1
 fi
