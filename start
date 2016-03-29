@@ -39,7 +39,7 @@ echo
 echo
 sleep 5
 
-PS3= "chose your option (1-4):" 
+PS3="chose your option (1-4):" 
 select name in Shell-updater service-pi-installer-NL service-pi-installer-EN exit
 do 
  	break 
