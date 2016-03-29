@@ -22,7 +22,7 @@ echo "enige stroom verlies kan zorgen voor het corruptie van het systeem"
 echo
 sleep 2
 
-PS3= "Kies uw DE (1-6)(LXQT is nog niet getest, EL = enlightenment):" 
+PS3="Kies uw DE (1-6)(LXQT is nog niet getest, EL = enlightenment):" 
 select name in LXDE XFCE LXQT MATE EL Verwijderen
 do 
  	break 
