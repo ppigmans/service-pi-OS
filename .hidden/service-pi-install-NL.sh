@@ -22,8 +22,8 @@ echo "enige stroom verlies kan zorgen voor het corruptie van het systeem"
 echo
 sleep 2
 
-PS3="Kies uw DE (1-6)(LXQT is nog niet getest, EL = enlightenment):" 
-select name in Verwijderen LXDE XFCE MATE LXQT EL
+PS3="Kies uw DE (1-7)(LXQT is nog niet getest, EL = enlightenment):" 
+select name in Verwijderen LXDE XFCE MATE LXQT EL Exit
 do 
  	break 
 done 
@@ -233,6 +233,12 @@ modprobe snd-bcm2835
 echo
 sleep 2
 echo "Herstarten"
+echo
+echo "Na het herstarten typ het volgende in een terminal"
+echo
+echo "amixer cset numid=3 1"
+echo
+echo "amixer cset numid=2 1"
 echo 
 sleep 5
 history -c
@@ -435,6 +441,12 @@ modprobe snd-bcm2835
 echo
 sleep 2
 echo "Herstarten"
+echo
+echo "Na het herstarten typ het volgende in een terminal"
+echo
+echo "amixer cset numid=3 1"
+echo
+echo "amixer cset numid=2 1"
 echo 
 sleep 5
 history -c
@@ -642,6 +654,12 @@ modprobe snd-bcm2835
 sleep 2
 echo
 echo "Herstarten"
+echo
+echo "Na het herstarten typ het volgende in een terminal"
+echo
+echo "amixer cset numid=3 1"
+echo
+echo "amixer cset numid=2 1"
 echo 
 sleep 5
 history -c
@@ -859,14 +877,18 @@ usermod -G nopasswdlogin medewerker
 cp ./.hidden/lightdm-gtk-greeter.conf /etc/lightdm/
 apt-get remove pulseaudio -y
 modprobe snd-bcm2835
-amixer cset numid=3 1
-amixer cset numid=2 1
 echo mate-session > /home/medewerker/.xsession
 echo mate-session > /home/admin/.xsession
 echo mate-session > /root/
 sleep 2
 echo
 echo "Herstarten"
+echo
+echo "Na het herstarten typ het volgende in een terminal"
+echo
+echo "amixer cset numid=3 1"
+echo
+echo "amixer cset numid=2 1"
 echo 
 sleep 5
 history -c
@@ -1088,6 +1110,12 @@ modprobe snd-bcm2835
 sleep 2
 echo
 echo "Herstarten"
+echo
+echo "Na het herstarten typ het volgende in een terminal"
+echo
+echo "amixer cset numid=3 1"
+echo
+echo "amixer cset numid=2 1"
 echo 
 sleep 5
 history -c
@@ -1138,5 +1166,10 @@ apt-get autoremove --purge -y
 apt-get -f install -y
 apt-get clean
 reboot 
+exit 1
+fi
+
+if [ "$name" = "Exit" ]; then
+echo "Afsluiten van script"
 exit 1
 fi
