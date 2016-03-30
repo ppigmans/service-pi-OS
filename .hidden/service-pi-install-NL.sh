@@ -240,6 +240,9 @@ echo "amixer cset numid=3 1"
 echo
 echo "amixer cset numid=2 1"
 echo 
+echo "Section \"ServerFlags\" " >> /etc/X11/xorg.conf
+echo "	Option \"DontVTSwitch\" \"true\" " >> /etc/X11/xorg.conf
+echo "EndSection" >> /etc/X11/xorg.conf
 sleep 5
 history -c
 echo `reboot`
@@ -439,6 +442,9 @@ apt-get remove pulseaudio -y
 apt-get -f install -y
 modprobe snd-bcm2835
 echo
+echo "Section \"ServerFlags\" " >> /etc/X11/xorg.conf
+echo "	Option \"DontVTSwitch\" \"true\" " >> /etc/X11/xorg.conf
+echo "EndSection" >> /etc/X11/xorg.conf
 sleep 2
 echo "Herstarten"
 echo
@@ -651,6 +657,9 @@ apt-get -f install -y
 apt-get remove pulseaudio -y
 apt-get -f install -y
 modprobe snd-bcm2835
+echo "Section \"ServerFlags\" " >> /etc/X11/xorg.conf
+echo "	Option \"DontVTSwitch\" \"true\" " >> /etc/X11/xorg.conf
+echo "EndSection" >> /etc/X11/xorg.conf
 sleep 2
 echo
 echo "Herstarten"
