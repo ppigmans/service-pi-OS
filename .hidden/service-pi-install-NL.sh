@@ -69,6 +69,8 @@ dpkg -i ./.hidden/NX.deb
 apt-get -f install -y
 dpkg -i ./.hidden/citrix-rec.deb
 apt-get -f install -y
+apt-get -q install ntp -y
+apt-get -f install -y
 ln /usr/lib/arm-linux-gnueabihf/libcurl.so /usr/lib/arm-linux-gnueabihf/libcurl.so.4
 ln -s /usr/share/ca-certificates/mozilla/* /opt/Citrix/ICAClient/keystore/cacerts
 c_rehash /opt/Citrix/ICAClient/keystore/cacerts
@@ -215,6 +217,7 @@ apt-get -f install -y
 echo
 sleep 2
 echo "Begin herschrijven van lightdm-gtk-greeter.conf en overige bestanden in plaats zetten"
+cp ./.hidden/ntp.conf /etc/ntp.conf
 cp ./.hidden/lxde-icon.png /usr/share/lxde/images/lxde-icon.png
 cp ./.hidden/logout-banner.png /usr/share/lxde/images/logout-banner.png
 cp ./.hidden/lightdm-gtk-greeter.conf /etc/lightdm/
@@ -227,8 +230,6 @@ apt-get -f install -y
 apt-get -qq remove chromium*
 apt-get -f install -y
 modprobe snd-bcm2835
-amixer cset numid=3 1
-amixer cset numid=2 1
 echo
 sleep 2
 echo "Herstarten"
@@ -244,24 +245,43 @@ echo
 echo "Begin installatie van LXQT"
 echo
 sleep 3
-
+apt-get -f install -y
 apt-get -q update
+apt-get -f install -y
 apt-get -q install plymouth -y
+apt-get -f install -y
 apt-get -q install plymouth-themes -y
+apt-get -f install -y
 apt-get -q install plymouth-label -y
+apt-get -f install -y
 apt-get -q install lxqt -y
+apt-get -f install -y
 apt-get -q install lightdm -y
+apt-get -f install -y
 apt-get -q install xinit -y
+apt-get -f install -y
 apt-get -q install git -y
+apt-get -f install -y
 apt-get -q install curlftpfs -y
+apt-get -f install -y
 apt-get -q install curl -y
+apt-get -f install -y
 apt-get -q install alacarte -y
+apt-get -f install -y
 apt-get -q install libcurl4-gnutls-dev -y
+apt-get -f install -y
 apt-get -q install xcompmgr -y
+apt-get -f install -y
+apt-get -q install ntp -y
+apt-get -f install -y
 apt-get -q install linux-firmware
+apt-get -f install -y
 apt-get -q install libxerces-c3.1 -y
+apt-get -f install -y
 dpkg -i ./.hidden/NX.deb
+apt-get -f install -y
 dpkg -i ./.hidden/citrix-rec.deb
+apt-get -f install -y
 ln /usr/lib/arm-linux-gnueabihf/libcurl.so /usr/lib/arm-linux-gnueabihf/libcurl.so.4
 ln -s /usr/share/ca-certificates/mozilla/* /opt/Citrix/ICAClient/keystore/cacerts
 c_rehash /opt/Citrix/ICAClient/keystore/cacerts
@@ -407,10 +427,11 @@ echo
 sleep 2
 echo "Begin herschrijven van lightdm-gtk-greeter.conf en overige bestanden in plaats zetten"
 cp ./.hidden/lightdm-gtk-greeter.conf /etc/lightdm
+cp ./.hidden/ntp.conf /etc/ntp.conf
+apt-get -f install -y
 apt-get remove pulseaudio -y
+apt-get -f install -y
 modprobe snd-bcm2835
-amixer cset numid=3 1
-amixer cset numid=2 1
 echo
 sleep 2
 echo "Herstarten"
@@ -460,6 +481,8 @@ apt-get -f install -y
 dpkg -i ./.hidden/NX.deb
 apt-get -f install -y
 dpkg -i ./.hidden/citrix-rec.deb
+apt-get -f install -y
+apt-get -q install ntp -y
 apt-get -f install -y
 ln /usr/lib/arm-linux-gnueabihf/libcurl.so /usr/lib/arm-linux-gnueabihf/libcurl.so.4
 ln -s /usr/share/ca-certificates/mozilla/* /opt/Citrix/ICAClient/keystore/cacerts
@@ -611,12 +634,11 @@ cp ./.hidden/sbg.jpg/home/.files/sbb.jpg
 cp /home/.files/sbb.jpg /usr/share/backgrounds/xfce/xfce-teal.jpg
 cp /home/.files/sbg.jpg /usr/share/backgrounds/xfce/xfce-blue.jpg
 cp ./.hidden/lightdm-gtk-greeter.conf /etc/lightdm/
+cp ./.hidden/ntp.conf /etc/ntp.conf
 apt-get -f install -y
 apt-get remove pulseaudio -y
 apt-get -f install -y
 modprobe snd-bcm2835
-amixer cset numid=3 1
-amixer cset numid=2 1
 sleep 2
 echo
 echo "Herstarten"
@@ -672,6 +694,8 @@ dpkg -i ./.hidden/NX.debF
 apt-get -f install -y
 dpkg -i ./.hidden/citrix-rec.deb
 apt-get -f install -y
+apt-get -q install ntp -y
+apt-get -f install -y
 ln /usr/lib/arm-linux-gnueabihf/libcurl.so /usr/lib/arm-linux-gnueabihf/libcurl.so.4
 ln -s /usr/share/ca-certificates/mozilla/* /opt/Citrix/ICAClient/keystore/cacerts
 c_rehash /opt/Citrix/ICAClient/keystore/cacerts
@@ -818,6 +842,7 @@ mkdir /home/.files
 #cp ./.hidden/lxde-icon.png /usr/share/lxde/images/lxde-icon.png
 #cp ./.hidden/logout-banner.png /usr/share/lxde/images/logout-banner.png
 cp ./.hidden/sbg.jpg /home/.files/
+cp ./.hidden/ntp.conf /etc/ntp.conf
 cp ./.hidden/lxde-icon.png /usr/share/icons/gnome/24x24/places/ubuntu-logo.png
 cp ./.hidden/lxde-icon.png /usr/share/icons/gnome/32x32/places/ubuntu-logo.png
 cp ./.hidden/lxde-icon.png /usr/share/icons/gnome/48x48/places/ubuntu-logo.png
@@ -856,24 +881,45 @@ echo
 sleep 3
 
 apt-get -q update
+apt-get -f install -y
 apt-get -q install plymouth -y
+apt-get -f install -y
 apt-get -q install plymouth-themes -y
+apt-get -f install -y
 apt-get -q install plymouth-label -y
+apt-get -f install -y
 apt-get -q install e17 -y
+apt-get -f install -y
 apt-get -q install alsa -y
+apt-get -f install -y
 apt-get -q install alsa_utils -y
+apt-get -f install -y
 apt-get -q install lightdm -y
+apt-get -f install -y
 apt-get -q install git -y
+apt-get -f install -y
 apt-get -q install curlftpfs -y 
+apt-get -f install -y
 apt-get -q install curl -y
+apt-get -f install -y
 apt-get -q install alacarte -y
+apt-get -f install -y
 apt-get -q install libcurl4-gnutls-dev -y
+apt-get -f install -y
 apt-get -q install xcompmgr -y
+apt-get -f install -y
 apt-get -q install lightdm-gtk-greeter -y
+apt-get -f install -y
+apt-get -q install ntp -y
+apt-get -f install -y
 apt-get -q install linux-firmware
+apt-get -f install -y
 apt-get -q install libxerces-c3.1 -y
+apt-get -f install -y
 dpkg -i ./.hidden/NX.debF
+apt-get -f install -y
 dpkg -i ./.hidden/citrix-rec.deb
+apt-get -f install -y
 ln /usr/lib/arm-linux-gnueabihf/libcurl.so /usr/lib/arm-linux-gnueabihf/libcurl.so.4
 ln -s /usr/share/ca-certificates/mozilla/* /opt/Citrix/ICAClient/keystore/cacerts
 c_rehash /opt/Citrix/ICAClient/keystore/cacerts
@@ -1031,10 +1077,11 @@ echo "	Option \"DontVTSwitch\" \"true\" " >> /etc/X11/xorg.conf
 echo "EndSection" >> /etc/X11/xorg.conf
 usermod -G nopasswdlogin medewerker
 cp ./.hidden/lightdm-gtk-greeter.conf /etc/lightdm/
+cp ./.hidden/ntp.conf /etc/ntp.conf
+apt-get -f install -y
 apt-get remove pulseaudio -y
+apt-get -f install -y
 modprobe snd-bcm2835
-amixer cset numid=3 1
-amixer cset numid=2 1
 #echo mate-session > /home/medewerker/.xsession
 #echo mate-session > /home/admin/.xsession
 #echo mate-session > /root/
