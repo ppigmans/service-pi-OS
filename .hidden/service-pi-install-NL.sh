@@ -425,6 +425,11 @@ echo
 sleep 3
 echo "Opruimen van systeem en downloads"
 echo
+cp ./.hidden/lxde-icon.svg /usr/share/lxqt/themes/frost/mainmenu.svg
+cp ./.hidden/lxde-icon.svg /usr/share/lxqt/themes/light/mainmenu.svg
+cp ./.hidden/lxde-icon.svg /usr/share/lxqt/themes/dark/mainmenu.svg
+cp ./.hidden/lxde-icon.svg /usr/share/lxqt/themes/ambiance/mainmenu.svg
+cp ./.hidden/lxde-icon.svg /usr/share/lxqt/themes/kde-plasma/mainmenu.svg
 apt-get -f install -y
 apt-get install lightdm-gtk-greeter -y
 apt-get -f install -y
